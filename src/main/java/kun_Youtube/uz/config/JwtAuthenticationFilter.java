@@ -61,21 +61,21 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 //            UserDetails userDetails =
 //                    customUserDetailsService.loadUserByUsername(username);
-//           log.info("✅ UserDetails yuklandi: " + userDetails.getUsername());
+//           log.info("UserDetails yuklandi: " + userDetails.getUsername());
 
             UserDetails userDetails =
                     customUserDetailsService.loadUserByUsername(username);
-            log.info("✅ UserDetails yuklandi: " + userDetails.getUsername());
+            log.info("UserDetails yuklandi: " + userDetails.getUsername());
 
-// ✅ 2.1. Agar CustomUserDetails bo‘lsa, profileId ni set qilamiz
+//  2.1. Agar CustomUserDetails bo‘lsa, profileId ni set qilamiz
             if (userDetails instanceof CustomUserDetails customUser) {
                 customUser.setId(jwtDTO.getProfileId());
-                log.info("✅ profileId set qilindi: " + jwtDTO.getProfileId());
+                log.info(" profileId set qilindi: " + jwtDTO.getProfileId());
             }
 
 
 
-            // ✅ 3. SecurityContext-ga yuboramiz
+            //  3. SecurityContext-ga yuboramiz
             UsernamePasswordAuthenticationToken authenticationToken =
                     new UsernamePasswordAuthenticationToken(
                             userDetails, // PRINCIPAL — String emas!
@@ -94,10 +94,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-            log.info("✅ Authentication security contextga qo‘shildi");
+            log.info(" Authentication security contextga qo‘shildi");
         } catch (JwtException | UsernameNotFoundException e) {
             // Optional: log qilishingiz mumkin
-            log.info(" ❌ JWT yoki UserDetails yuklashda xato: " + e.getMessage());
+            log.info(" JWT yoki UserDetails yuklashda xato: " + e.getMessage());
             e.printStackTrace(); // vaqtinchalik
 
         }
