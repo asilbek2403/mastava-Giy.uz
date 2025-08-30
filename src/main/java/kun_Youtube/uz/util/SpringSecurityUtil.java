@@ -27,10 +27,10 @@ public class SpringSecurityUtil {
             log.info("getId: " + user.getId());
             return user.getId();
         }    if (principal instanceof String str && str.equals("anonymousUser")) {
-            throw new AppBadException("NNNNNN-❌ Anonymous user — login required");
+            throw new AppBadException("NNNNNN-Anonymous user — login required");
         }
 
-//        throw new AppBadException("❌NNNNNN Unknown principal type: " + principal.getClass().getName());
+//        throw new AppBadException("NNNNNN Unknown principal type: " + principal.getClass().getName());
 
         return null; //
     }
