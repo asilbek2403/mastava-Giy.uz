@@ -1,0 +1,88 @@
+### Create
+POST http://localhost:8081/profile/channel/create
+Content-Type: application/json
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+{
+  "name": " Coders >>>>Bobur",
+  "description": "Bu mening 1 Programming lessons ishimdan",
+  "photoId": "d7b58273-dc69-40bb-8c5d-4cd97f51bbba.jpg",
+  "bannerId": "4d9d30ed-692b-4a1e-ae2a-599f5d7a12b5.jpg"
+}
+### Create
+POST http://localhost:8081/profile/channel/create
+Content-Type: application/json
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+{
+  "name": "Time can PROGRAMMING",
+  "description": "5 Programming lessons ishimdan",
+  "photoId": "4d9d30ed-692b-4a1e-ae2a-599f5d7a12b5.jpg",
+  "bannerId": "d7b58273-dc69-40bb-8c5d-4cd97f51bbba.jpg"
+}
+### Create
+POST http://localhost:8081/profile/channel/create
+Content-Type: application/json
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
+
+
+{
+  "name": "Coding JAva Person 3 ",
+  "description": "Experience GO ",
+  "photoId": "d7b58273-dc69-40bb-8c5d-4cd97f51bbba.jpg",
+  "bannerId": "d7b58273-dc69-40bb-8c5d-4cd97f51bbba.jpg"
+}
+
+
+
+###
+eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFzaWx1c3RvejM3QGdtYWlsLmNvbSIsInN1YiI6ImFzaWx1c3RvejM3QGdtYWlsLmNvbSIsImlhdCI6MTc1MzU3MDAxNiwiZXhwIjoxNzUzNjU2NDE2fQ.vn3SMVcKIAiK5gdXIegLOxis3JLKbiUlfpWQsMLt7piBHM7sFbwDrw9W6pKNe48UQY009Uik8RllK9bdDpkdXg
+
+
+### Update
+PUT http://localhost:8081/profile/channel/update/5c293285-d3fe-4b06-ba27-1629aabf9372
+Content-Type: application/json
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+{
+  "name": "Coders Team",
+  "description": "Yangi description"
+}
+
+
+### Update Photo
+PATCH http://localhost:8081/profile/channel/update/photo/5c293285-d3fe-4b06-ba27-1629aabf9372?photoId=8076ff87-7c4d-418c-9a6c-8f9e18fd8f84.jpg
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+
+### Update Banner
+PATCH http://localhost:8081/profile/channel/update/banner/8076ff87-7c4d-418c-9a6c-8f9e18fd8f84?bannerId=5c293285-d3fe-4b06-ba27-1629aabf9372.jpg
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+
+### Pagination
+GET http://localhost:8081/profile/channel/pageList?page=1&size=2
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+
+### Get By ID
+GET http://localhost:8081/profile/channel/getId/40d203b6-fc43-4fce-9812-1981a62c508f
+Content-Type: application/json
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+
+
+### Change Status
+PATCH http://localhost:8081/profile/channel/update-status/a2140eed-6c21-4a33-a498-c252386dbdd9/status?status=BLOCK
+Content-Type: application/json
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+
+### User’s Own Channel List
+GET http://localhost:8081/profile/channel/my-channels
+Authorization: Basic b3NobWF0M0BnbWFpbC5jb206YTIyMjI=
+
+
+
+//TODO admin channel qilmaydi  ROLga etibor!
+

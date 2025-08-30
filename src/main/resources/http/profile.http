@@ -1,0 +1,129 @@
+
+### Create
+POST localhost:8081/api/v1/profile/admin/create
+Content-Type: application/json
+
+{
+
+  "name": "KompotGilos+",
+  "surname": "Kompotov+",
+  "username": "KompotS1@gmail.com",
+  "password": "12324",
+  "roleList": [ "ROLE_ADMIN",
+    "ROLE_MODERATOR",
+    "ROLE_USER"]
+
+}
+
+###Create
+POST http://localhost:8081/api/v1/profile/admin/create
+Content-Type: application/json
+
+{
+  "name": "Bobur",
+  "surname": "Jumaniyazov",
+  "username": "oshmat3@gmail.com",
+  "password": "a2222",
+  "roleList": [  "ROLE_ADMIN",
+    "ROLE_MODERATOR"
+  ]
+}
+
+###
+///Authorization: Basic YXNpbHVzdG96MzdAZ21haWwuY29tOjEyMzQ1NQ==
+//Authorization: Basic S29tcG90QGdtYWlsLmNvbToxMjM0NQ==
+
+###
+POST http://localhost:8081/api/v1/profile/admin/create
+Content-Type: application/json
+#Authorization: Basic YXNpbHVzdG96MzdAZ21haWwuY29tOjEyMzQ1NQ==
+
+{
+  "name": "Asilbek",
+  "surname": "Coders",
+  "username": "asilustoz37@gmail.com",
+  "password": "12345",
+  "roleList": [
+    "ROLE_ADMIN",
+    "ROLE_MODERATOR"
+  ]
+}
+
+
+###
+// { "name": "BotirO'g'lon",
+//  "surname": "Toshmatov1",
+### "username": "tomat1@gmail.com",
+//  "password": "12345",
+//  "roleList": [
+//    "ROLE_ADMIN",
+//    "ROLE_MODERATOR"
+//  ]
+//}
+
+###PUT###
+#PUT http://localhost:8080/api/v1/profile/update/id/1
+#Content-Type: application/json
+#
+#{
+#  "name": "Asilbek",
+#  "surname": "Qodirov",
+###  "username": "asilbek_updated@example.com",
+#  "photoId": "abc123-updated"
+#} Bunda fieldlar yo'q ekan !!!!!!!!!!!
+
+
+### CREATE profile
+PUT http://localhost:8081/api/v1/profile/update/id/1
+Content-Type: application/json
+
+{
+  "name": "Bobur",
+  "surname": "Jumaniyazov",
+  "username": "+998900000002",
+  "password": "a222",
+  "status": "ACTIVE",
+  "roleList": [  "ROLE_ADMIN",
+    "ROLE_MODERATOR"
+  ]
+}
+
+### GET profile by ID
+GET http://localhost:8081/api/v1/profile/1
+Accept: application/json
+Authorization: Basic    eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfTU9ERVJBVE9SIiwiUk9MRV9PV05FUiJdLCJwcm9maWxlX2lkIjoyLCJ1c2VybmFtZSI6ImFzaWx1c3RvejM3QGdtYWlsLmNvbSIsInN1YiI6ImFzaWx1c3RvejM3QGdtYWlsLmNvbSIsImlhdCI6MTc1NjIwMDg2MCwiZXhwIjoxNzU2Mjg3MjYwfQ.7YfCaALI88Dn4obfaD45hGQjI5nwBzZfRCghLLWc9tR2rCXbgXDz8CquXBWzYDjj_mjMJ0vsAGI21ECFcva-5w
+
+### UPDATE profile
+PUT http://localhost:8081/api/v1/profile/admin/update/id/2
+Content-Type: application/json
+#Authorization: Basic YXNpbHVzdG96MzdAZ21haWwuY29tOjEyMzQ1NQ==
+
+{
+  "name": "VAli",
+  "surname": "aliyyev",
+  "username": "vali@gmail.com",
+  "password": "Password123",
+  "status": "ACTIVE",
+  "roleList": ["ROLE_PUBLISH"]
+}
+
+### DELETE profile
+DELETE http://localhost:8080/api/v1/profile/2
+Authorization: Basic YXNpbHVzdG96MzdAZ21haWwuY29tOjEyMzQ1NQ==
+
+
+### Photo update
+#PUT http://localhost:8080/api/v1/profile/profilePhoto/1
+#Content-Type: application/json
+#
+#"fb6ae1f4-1aab"
+
+### pagination
+GET localhost:8080/api/v1/profile/pagination?page=1&size=1
+###2-page uchun
+GET localhost:8080/api/v1/profile/pagination?page=2&size=1
+### 3- page uchun
+GET localhost:8080/api/v1/profile/pagination?page=3&size=1
+
+###AllProfile
+GET http://localhost:8080/api/v1/profile/getlist

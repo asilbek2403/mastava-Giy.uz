@@ -1,0 +1,27 @@
+###Create
+POST http://localhost:8081/api/v1/report
+Content-Type: application/json
+Authorization:
+
+{
+  "entityId": "ch123",
+  "type": "CHANNEL",
+  "content": "This channel spreads spam"
+}
+
+###
+GET http://localhost:8081/api/v1/report/admin/list?page=0&size=10
+Content-Type: application/json
+Authorization: Bearer <ADMIN_TOKEN>
+
+
+###remove
+DELETE http://localhost:8081/api/v1/report/admin/{id}
+Content-Type: application/json
+Authorization: Bearer <ADMIN_TOKEN>
+
+
+###
+GET http://localhost:8081/api/v1/report/admin/user/{userId}?page=0&size=5
+Authorization: Bearer <ADMIN_TOKEN>
+

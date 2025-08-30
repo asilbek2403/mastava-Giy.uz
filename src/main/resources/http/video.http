@@ -1,0 +1,76 @@
+
+###Create
+POST http://localhost:8081/profile-video/create
+Content-Type: application/json
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
+
+{
+  "title": "Mening birinchi video",
+  "description": "Video tavsifi",
+  "previewAttachId": "98918b87-2c6e-4956-ba67-de7c01efb5e6.jpg",
+  "attachId": "a2140eed-6c21-4a33-a498-c252386dbdd9.jpg",
+  "channelId": "cabbc6bf-f452-49f0-af41-1b1aa2bbdbe9",
+  "categoryId": 1,
+  "duration": 22,
+  "tagList": ["1", "2", "5"]
+}
+
+
+### Update Video
+PUT http://localhost:8081/profile-video/update/73e35a2d-a7ec-4c12-bbba-f1bc60e2f9f1
+Content-Type: application/json
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
+
+{
+  "title": "Yangilangan video sarlavhasi-------{Mening birinchi video datadan}",
+  "description": "Yangi tavsif",
+  "previewAttachId": "98918b87-2c6e-4956-ba67-de7c01efb5e6.jpg",
+  "attachId": "a2140eed-6c21-4a33-a498-c252386dbdd9.jpg",
+  "categoryId": 2,
+  "tagList": ["3", "4"]
+}
+
+
+
+### Change Status
+PUT http://localhost:8081/profile-video/change-status/73e35a2d-a7ec-4c12-bbba-f1bc60e2f9f1?status=PUBLIC&profileId=2
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
+
+
+
+
+###4 Increase View Count
+POST http://localhost:8081/profile-video/increase-view/73e35a2d-a7ec-4c12-bbba-f1bc60e2f9f1
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
+
+
+### Get Videos by Category
+GET http://localhost:8081/profile-video/category/1?page=0&size=5
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
+
+### Search Video by Title
+GET http://localhost:8081/profile-video/titleName/search?title=Mening birinchi video&page=0&size=5
+
+
+### Get Videos by Tag
+GET http://localhost:8081/profile-video/tag/2?page=0&size=5
+
+
+### Get Video By Id
+GET http://localhost:8081/profile-video/by-Id-Video/{videoId}
+
+
+### Admin Video List Pagination
+GET http://localhost:8081/profile-video/admin/pagination?page=0&size=10
+Authorization: Basic QURNSU5AZ21haWwuY29tOjEyMzQ1
+
+
+
+### Channel Video List
+GET http://localhost:8081/profile-video/channel/cabbc6bf-f452-49f0-af41-1b1aa2bbdbe9?page=0&size=5
+Authorization: Basic QURNSU5AZ21haWwuY29tOjEyMzQ1
+###########Shu yerdan qaraymi TODO ex...
+
+### Delete Video
+DELETE http://localhost:8081/profile-video/delete/3b4c6a8d-12f3-44c7-bb4c-7ac08d99c442
+Authorization: Basic S29tcG90UzFAZ21haWwuY29tOjEyMzI0
